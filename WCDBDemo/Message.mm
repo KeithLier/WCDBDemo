@@ -20,12 +20,13 @@ WCDB_SYNTHESIZE(Message, createTime)
 WCDB_SYNTHESIZE(Message, modifiedTime)
 
 // WCDB_PRIMARY用于定义主键
-WCDB_PRIMARY(Message, localID)
+WCDB_PRIMARY_AUTO_INCREMENT(Message, localID)
 
 // WCDB_INDEX用于定义索引
 WCDB_INDEX(Message, "_index", createTime)
 
 // WCDB_UNIQUE用于定义唯一约束
+//WCDB_UNIQUE(Message, localID)
 // WCDB_NOT_NULL用于定义非空约束
 
 @end

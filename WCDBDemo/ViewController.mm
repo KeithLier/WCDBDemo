@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "Message.h"
 #import <FMDB/FMDB.h>
+#import "WCDBManager.h"
+
+#import "Message.h"
+#import "User.h"
+#import "Goods.h"
 
 @interface ViewController ()
 
@@ -22,9 +26,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES);
+    NSString *path = [paths firstObject];
+    NSLog(@"path = %@",path);
+    //WCDB
+    NSString *wcdbPath = [path stringByAppendingPathComponent:@"ckc.db"];
+
+    WCDBManager *wcdb = [WCDBManager wcdbManager];
+    [wcdb openDatabase:wcdbPath];
+    [wcdb createTableOfName:@"message" withClass:Message.class];
+    [wcdb createTableOfName:@"user" withClass:User.class];
+    [wcdb createTableOfName:@"goods" withClass:Goods.class];
     
+    for (int i = 0; i < 10; i++) {
+        Message *msg = [[Message alloc] init];
+        msg.content = [NSString stringWithFormat:@"I am number %d",i];
+        msg.createTime = [NSDate date];
+        msg.modifiedTime = [NSDate date];
+        BOOL result = [wcdb.database insertObject:msg into:@"message"];
+        if (result) {
+            NSLog(@"insert success");
+        }
+    }
+
     //create table
-    [self createTable];
+//    [self createTable];
 //    //insert
 //    [self insertObject];
 //    //query
