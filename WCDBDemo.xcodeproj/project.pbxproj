@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		534C81621EF76BD9001E434C /* Model.mm in Sources */ = {isa = PBXBuildFile; fileRef = 534C81611EF76BD9001E434C /* Model.mm */; };
 		534CB76A1EF3705D00B324D6 /* User.mm in Sources */ = {isa = PBXBuildFile; fileRef = 534CB7691EF3705D00B324D6 /* User.mm */; };
 		534CB76D1EF370E100B324D6 /* Goods.mm in Sources */ = {isa = PBXBuildFile; fileRef = 534CB76C1EF370E100B324D6 /* Goods.mm */; };
 		534CB7701EF37A0000B324D6 /* WCDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 534CB76F1EF37A0000B324D6 /* WCDBManager.mm */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		534C81601EF76BD9001E434C /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		534C81611EF76BD9001E434C /* Model.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Model.mm; sourceTree = "<group>"; };
 		534CB7681EF3705D00B324D6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		534CB7691EF3705D00B324D6 /* User.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = User.mm; sourceTree = "<group>"; };
 		534CB76B1EF370E100B324D6 /* Goods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goods.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				53F1E6F91EEF834E0013EBA8 /* ViewController.mm */,
 				534CB76E1EF379FF00B324D6 /* WCDBManager.h */,
 				534CB76F1EF37A0000B324D6 /* WCDBManager.mm */,
+				534C81601EF76BD9001E434C /* Model.h */,
+				534C81611EF76BD9001E434C /* Model.mm */,
 				53F1E7291EEF85DB0013EBA8 /* Message.h */,
 				53F1E72A1EEF85DB0013EBA8 /* Message.mm */,
 				534CB7681EF3705D00B324D6 /* User.h */,
@@ -340,6 +345,7 @@
 				534CB7701EF37A0000B324D6 /* WCDBManager.mm in Sources */,
 				534CB76A1EF3705D00B324D6 /* User.mm in Sources */,
 				534CB76D1EF370E100B324D6 /* Goods.mm in Sources */,
+				534C81621EF76BD9001E434C /* Model.mm in Sources */,
 				534CB7731EF3A3E600B324D6 /* Order.mm in Sources */,
 				53F1E6F71EEF834E0013EBA8 /* AppDelegate.m in Sources */,
 				53F1E6F41EEF834E0013EBA8 /* main.m in Sources */,

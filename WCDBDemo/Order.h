@@ -6,10 +6,10 @@
 //  Copyright © 2017年 keith. All rights reserved.
 //
 
-#import <WCDB/WCDB.h>
+#import "Model.h"
 #import <UIKit/UIKit.h>
 
-@interface Order : NSObject <WCTTableCoding>
+@interface Order : Model
 
 
 @property (nonatomic, assign) int orderID;
@@ -19,15 +19,10 @@
 @property (nonatomic, assign) CGFloat price;
 
 
-
 WCDB_PROPERTY(orderID)
-//Property With Index
 WCDB_PROPERTY(userID)
-//Propery With Specified Column Name
 WCDB_PROPERTY(goodsID)
-//Propery With Default Value
 WCDB_PROPERTY(qty)
-//Properies With Multi-Indexes
 WCDB_PROPERTY(price)
 
 @end

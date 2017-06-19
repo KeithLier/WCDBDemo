@@ -6,10 +6,10 @@
 //  Copyright © 2017年 keith. All rights reserved.
 //
 
-#import <WCDB/WCDB.h>
+#import "Model.h"
 #import <UIKit/UIKit.h>
 
-@interface Goods : NSObject <WCTTableCoding>
+@interface Goods : Model
 
 @property (nonatomic, assign) int goodsID;
 @property (nonatomic, retain) NSString *sku;

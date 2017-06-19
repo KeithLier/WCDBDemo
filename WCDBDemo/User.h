@@ -6,9 +6,9 @@
 //  Copyright © 2017年 keith. All rights reserved.
 //
 
-#import <WCDB/WCDB.h>
+#import "Model.h"
 
-@interface User : NSObject <WCTTableCoding>
+@interface User : Model
 
 @property (nonatomic, assign) int userID;
 @property (nonatomic, retain) NSString *username;

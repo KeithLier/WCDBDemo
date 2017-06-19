@@ -13,6 +13,7 @@
 #import "Message.h"
 #import "User.h"
 #import "Goods.h"
+#import "Order.h"
 
 @interface ViewController ()
 
@@ -37,9 +38,11 @@
     [wcdb createTableOfName:@"message" withClass:Message.class];
     [wcdb createTableOfName:@"user" withClass:User.class];
     [wcdb createTableOfName:@"goods" withClass:Goods.class];
-    
+    [wcdb createTableOfName:@"order" withClass:Order.class];
+
     for (int i = 0; i < 10; i++) {
         Message *msg = [[Message alloc] init];
+        msg.localID = i;
         msg.content = [NSString stringWithFormat:@"I am number %d",i];
         msg.createTime = [NSDate date];
         msg.modifiedTime = [NSDate date];
@@ -47,8 +50,20 @@
         if (result) {
             NSLog(@"insert success");
         }
+        
+        User *user = [[User alloc] init];
+        user.userID = i;
+        user.username = [NSString stringWithFormat:@"user-%d",i];
+        user.address = [NSString stringWithFormat:@"address %d",i];
+        user.phone = [NSString stringWithFormat:@"1522129710%d",i];
+        user.createTime = [NSDate date];
+        user.modifiedTime = [NSDate date];
+        result = [wcdb.database insertObject:user into:@"user"];
+        if (result) {
+            NSLog(@"update success");
+        }
+        
     }
-
     //create table
 //    [self createTable];
 //    //insert

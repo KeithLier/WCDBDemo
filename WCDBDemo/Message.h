@@ -6,9 +6,9 @@
 //  Copyright © 2017年 keith. All rights reserved.
 //
 
-#import <WCDB/WCDB.h>
+#import "Model.h"
 
-@interface Message : NSObject <WCTTableCoding>
+@interface Message : Model 
 
 @property int localID;
 @property(retain) NSString *content;
